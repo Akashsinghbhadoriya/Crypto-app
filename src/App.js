@@ -1,43 +1,27 @@
 import './App.css';
-import React from 'react';
+import React, { Component } from 'react';
 import Crypto from './Crypto';
 import Exchange from './exchange';
+import {BrowserRouter as Router,Link, Route, Routes } from 'react-router-dom';
 
-class App extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state={page:'homepage'};
-  }
 
-  handleClick(e){
-    if(e==='crypto'){
-      this.setState({page:'crypto'});
-    }
-    else if(e==='exchangerate'){
-      this.setState({page:'exchangerate'});
-    }
-  }
+class App extends Component{
   render(){
-    if(this.state.page==='homepage')
-    {
-      return (
+    return (
+      <Router>
         <div className='home-page'>
-          <h1>Welcome to Crypto World!!!</h1>
-          <div className='link-page'>
-            <button value='crypto' onClick={()=>this.handleClick('crypto')}> Cryptocurrencies</button>
-            <button value='exchangerate' onClick={()=>this.handleClick('exchangerate')}>Exchange Rates</button>
-          </div>
+        <h1>Welcome to Crypto World!!!</h1>
+        <div className='link-page'>
+          <button ><Link to="/crypto">Cryptocurrencies</Link></button>
+          <button ><Link to="/exchange">Exchange Rates</Link></button>
         </div>
-      );
-    }
-    else if(this.state.page==='crypto')
-    {
-      return(<Crypto></Crypto>)
-    }
-    else if(this.state.page==='exchangerate')
-    {
-      return(<Exchange></Exchange>)
-    }
+        <Routes>
+          <Route path='/crypto' element={<Crypto></Crypto>}></Route>
+          <Route path='/exchange' element={<Exchange></Exchange>}></Route>
+        </Routes>
+      </div>
+      </Router>
+    );
   }
 }
 
