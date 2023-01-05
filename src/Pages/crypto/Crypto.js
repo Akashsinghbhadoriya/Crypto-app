@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
-import Coin from './coin';
+import Coin from '../../components/coin/coin';
 import './crypto.css';
 
 function Crypto(){

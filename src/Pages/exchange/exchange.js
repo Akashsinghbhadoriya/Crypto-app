@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios';
-import Rate from './Rate'
+import Rate from '../../components/rate/Rate'
 
 const Exchange = () => {
 
