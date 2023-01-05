@@ -11,9 +11,9 @@ class App extends Component{
     return (
       <Router>
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/crypto' element={<Crypto></Crypto>}></Route>
-          <Route path='/exchange' element={<Exchange></Exchange>}></Route>
+          <Route path='/Crypto-app' element={<Home/>}></Route>
+          <Route path='/Crypto-app/crypto' element={<Crypto></Crypto>}></Route>
+          <Route path='/Crypto-app/exchange' element={<Exchange></Exchange>}></Route>
         </Routes>
       </Router>
     );

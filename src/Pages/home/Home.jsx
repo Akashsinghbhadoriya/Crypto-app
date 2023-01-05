@@ -7,8 +7,8 @@ function Home() {
     <div className='home-page'>
         <h1>Welcome to Crypto World!!!</h1>
         <div className='link-page'>
-        <Link to="/crypto" style={{textDecoration:"none"}}><button className='linkButton'>Cryptocurrencies</button></Link>
-        <Link to="/exchange" style={{textDecoration:"none"}}><button className='linkButton'>Exchange Rates</button></Link>
+        <Link to="/Crypto-app/crypto" style={{textDecoration:"none"}}><button className='linkButton'>Cryptocurrencies</button></Link>
+        <Link to="/Crypto-app/exchange" style={{textDecoration:"none"}}><button className='linkButton'>Exchange Rates</button></Link>
         </div>
     </div>
   )
